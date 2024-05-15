@@ -214,7 +214,7 @@ where
 #[cfg(feature = "der")]
 impl<C> PrehashVerifier<der::Signature<C>> for VerifyingKey<C>
 where
-    C: PrimeCurve + CurveArithmetic + DigestPrimitive,
+    C: PrimeCurve + CurveArithmetic,
     AffinePoint<C>: VerifyPrimitive<C>,
     SignatureSize<C>: ArrayLength<u8>,
     der::MaxSize<C>: ArrayLength<u8>,
